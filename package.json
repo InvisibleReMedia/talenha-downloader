@@ -1,0 +1,125 @@
+{
+  "name": "talenha-downloader",
+  "displayName": "Talenha Downloader",
+  "description": "Download files from Talenha web site",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "talenha-downloader.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "talenha-downloader.ReadTalenhaFile",
+        "title": "Read a Talenha file"
+      },
+      {
+        "command": "talenha-downloader.WriteTalenhaFile",
+        "title": "Write a Talenha file"
+      },
+      {
+        "command": "talenha-downloader.DownloadTalenhaRepository",
+        "title": "Get Talenha Repository"
+      }
+    ],
+    "configurations": [
+      {
+        "title": "Talenha Downloader Configuration",
+        "properties": {
+          "talenha-downloader.readServerURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/readfile.php",
+            "description": "URL of the server to read a file"
+          },
+          "talenha-downloader.username": {
+            "type": "string",
+            "default": "olivier",
+            "description": "User name to authenticate"
+          },
+          "talenha-downloader.password": {
+            "type": "string",
+            "default": "",
+            "description": "Password to authenticate"
+          },
+          "talenha-downloader.authenticationURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/verifyUser.php",
+            "description": "URL of the server to authenticate user"
+          },
+          "talenha-downloader.getlanguagesURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/getlanguages.php",
+            "description": "URL of the server to get all languages files"
+          },
+          "talenha-downloader.getfunctionsURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/getfunctions.php",
+            "description": "URL of the server to get all functions files"
+          },
+          "talenha-downloader.getmopsURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/getmops.php",
+            "description": "URL of the server to get all mops files"
+          },
+          "talenha-downloader.getfilesURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/getfiles.php",
+            "description": "URL of the server to get all general files"
+          },
+          "talenha-downloader.getoutputsURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/getoutputs.php",
+            "description": "URL of the server to get all outputs files"
+          },
+          "talenha-downloader.readlanguagesURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/readlanguage.php",
+            "description": "URL of the server to get all languages files"
+          },
+          "talenha-downloader.readfunctionsURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/readfunction.php",
+            "description": "URL of the server to get all functions files"
+          },
+          "talenha-downloader.readmopsURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/readmop.php",
+            "description": "URL of the server to get all mops files"
+          },
+          "talenha-downloader.readoutputsURL": {
+            "type": "string",
+            "default": "http://localhost/JAlpha/readoutput.php",
+            "description": "URL of the server to get all outputs files"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^2.22.0",
+    "axios": "^1.6.4",
+    "esm": "^3.2.25"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "talenha-downloader.readServerURL" : "http://localhost/JAlpha/readfile.php",
+    "talenha-downloader.username" : "olivier",
+    "talenha-downloader.password" : "",
+    "talenha-downloader.authenticationURL" : "http://localhost/JAlpha/verifyUser.php"
+}
